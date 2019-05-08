@@ -5,4 +5,4 @@ from .models import Memo
 class MemoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Memo
-        fields = ['content', ]
+        fields = ['content', 'id', ]
