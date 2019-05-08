@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="main">
+    <h1>Sticky Notes</h1>
+    <textarea></textarea>
+    <button>Write!</button>
+    <div id="memo-container">
+      <div class="memo" v-for="memo in memos">
+        <div class="memo-delete-button"></div>
+        {{ memo.content }}
+      </div>
+    </div>
+  </div>
+  <script>
+  const app = new Vue({
+    el: '#main',
+    data: {
+      url: '',
+      content: '',
+      memos: [],
+    },
+    methods: {
+      writeMemo: function() {
+      },
+    },
+    created: function() {
+    }
+  })
+  </script>
+</body>
+</html>
